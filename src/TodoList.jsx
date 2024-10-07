@@ -18,12 +18,13 @@ function TodoList() {
   const gridRef = useRef();
 
   const [columnDefs, setColumnDefs] = useState([
-    { field: "desc", sortable: true, filter: true },
-    { field: "date", sortable: true, filter: true },
+    { field: "desc", sortable: true, filter: true, floatingFilter: true },
+    { field: "date", sortable: true, filter: true, floatingFilter: true },
     {
       field: "priority",
       sortable: true,
       filter: true,
+      floatingFilter: true,
       cellStyle: (param) =>
         param.value === "High" ? { color: "red" } : { color: "black" },
     },
